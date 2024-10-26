@@ -1,5 +1,4 @@
 /*
- * /*
  * Given a string, returns the length of
  *  the largest run in the string.
  * A "run" is a series of zero or
