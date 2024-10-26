@@ -6,7 +6,7 @@
  *  more adjacent characters that are the same.
  * @author  Mikael Amare
  * @version 1.0
- * @since   2024-10-18
+ * @since   2024-10-26
  */
 
 public int maxRun(String str) {
