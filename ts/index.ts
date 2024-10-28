@@ -26,7 +26,7 @@ function maxRun(str: string): number {
     return Math.max(maxRunLength, currentRunLength)
 }
 
-async function getUserInputAndCalculateRun() {
+async function runCalculations() {
     const str = await prompt("Enter a string: ")
     if (str !== null) {
         const longestRun = maxRun(str)
@@ -37,4 +37,4 @@ async function getUserInputAndCalculateRun() {
 }
 
 // Call the function to run it
-getUserInputAndCalculateRun()
+runCalculations()
