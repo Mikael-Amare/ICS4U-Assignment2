@@ -11,7 +11,7 @@
 
 import java.util.Scanner;
 
-public static void Main { // Marking class as final to address Checkstyle warning
+public final class Main{ // Marking class as final to address Checkstyle warning
 
     // Private constructor to prevent instantiation of utility class
     private Main() {
@@ -30,10 +30,15 @@ public static void Main { // Marking class as final to address Checkstyle warnin
         System.out.print("Enter a string to find the largest run: ");
         String input = scanner.nextLine();
 
-        // Call maxRun function and display result
-        int result = maxRun(input);
-        System.out.println("The length of the largest run is: " + result);
-
+        // Check if input is empty
+        if (input.isEmpty()) {
+            System.out.println("No input provided");
+        } else {
+            // Call maxRun function and display result
+            int result = maxRun(input);
+            System.out.println("The length of the largest run is: " + result);
+            System.out.println("Done.");
+        }
         scanner.close();
     }
 
@@ -61,4 +66,4 @@ public static void Main { // Marking class as final to address Checkstyle warnin
         }
         return Math.max(maxRun, currentRun);
     }
-}}
+}
