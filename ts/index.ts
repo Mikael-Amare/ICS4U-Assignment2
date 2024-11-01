@@ -10,30 +10,30 @@
 
 import { createPrompt } from 'bun-promptx'
 
-function maxRun(str: string): number {
-    let maxRunLength = 0
-    let currentRunLength = 1
+function maxRun (str: string): number {
+  let maxRunLength = 0
+  let currentRunLength = 1
 
-    for (let counter = 1; counter < str.length; counter++) {
-        if (str[counter] === str[counter - 1]) {
-            currentRunLength++
-        } else {
-            maxRunLength = Math.max(maxRunLength, currentRunLength)
-            currentRunLength = 1
-        }
+  for (let counter = 1; counter < str.length; counter++) {
+    if (str[counter] === str[counter - 1]) {
+      currentRunLength++
+    } else {
+      maxRunLength = Math.max(maxRunLength, currentRunLength)
+      currentRunLength = 1
     }
+  }
 
-    return Math.max(maxRunLength, currentRunLength)
+  return Math.max(maxRunLength, currentRunLength)
 }
 
-async function runCalculations() {
-    const str = await prompt("Enter a string: ")
-    if (str !== null) {
-        const longestRun = maxRun(str)
-        console.log(`The length of the longest run is: ${longestRun}`)
-    } else {
-        console.log("No input provided.")
-    }
+function runCalculations (): void {
+  const str = createPrompt('Enter a string: ') as string | null
+  if (str !== null) {
+    const longestRun = maxRun(str)
+    console.log(`The length of the longest run is: ${longestRun}`)
+  } else {
+    console.log('No input provided.')
+  }
 }
 
 // Call the function to run it

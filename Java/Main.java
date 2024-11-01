@@ -3,7 +3,6 @@
  * A "run" is a series of zero or more adjacent characters that are
  * the same. This program prompts the user to enter a string, then
  * calculates the length of the largest run.
- * 
  * @author  Mikael Amare
  * @version 1.0
  * @since   2024-10-26
@@ -11,7 +10,8 @@
 
 import java.util.Scanner;
 
-public final class Main{ // Marking class as final to address Checkstyle warning
+public final class Main {
+    // Marking class as final to address Checkstyle warning
 
     // Private constructor to prevent instantiation of utility class
     private Main() {
@@ -20,7 +20,6 @@ public final class Main{ // Marking class as final to address Checkstyle warning
 
     /**
      * Main method to execute the program.
-     * 
      * @param args the command-line arguments (not used)
      */
     public static void main(final String[] args) {
@@ -44,7 +43,6 @@ public final class Main{ // Marking class as final to address Checkstyle warning
 
     /**
      * Given a string, returns the length of the largest run in the string.
-     * 
      * @param str the input string
      * @return the length of the largest run
      */
