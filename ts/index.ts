@@ -10,6 +10,17 @@
 
 import { createPrompt } from 'bun-promptx'
 
+function runCalculations (): void {
+  const str = createPrompt('Enter a string: ') as string | null
+  if (str !== null) {
+    const longestRun = maxRun(str)
+    console.log(`The length of the longest run is: ${longestRun}`)
+  } else {
+    console.log('No input provided.')
+  }
+}
+
+
 function maxRun (str: string): number {
   let maxRunLength = 0
   let currentRunLength = 1
@@ -25,16 +36,3 @@ function maxRun (str: string): number {
 
   return Math.max(maxRunLength, currentRunLength)
 }
-
-function runCalculations (): void {
-  const str = createPrompt('Enter a string: ') as string | null
-  if (str !== null) {
-    const longestRun = maxRun(str)
-    console.log(`The length of the longest run is: ${longestRun}`)
-  } else {
-    console.log('No input provided.')
-  }
-}
-
-// Call the function to run it
-runCalculations()
