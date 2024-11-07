@@ -10,6 +10,11 @@
 
 import { createPrompt } from 'bun-promptx'
 
+/**
+ * Given a string, returns the length of the largest run in the string.
+ * the input string
+ * return is the length of the largest run
+ */
 function runCalculations (): void {
   const str = createPrompt('Enter a string: ') as string | null
   if (str !== null) {
@@ -19,8 +24,10 @@ function runCalculations (): void {
     console.log('No input provided.')
   }
 }
-
-
+/**
+ * Calculates the length of the longest consecutive
+ *     run of identical characters in a given string.
+ */
 function maxRun (str: string): number {
   let maxRunLength = 0
   let currentRunLength = 1
