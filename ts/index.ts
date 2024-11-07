@@ -26,7 +26,7 @@ function runCalculations (): void {
 }
 /**
  * Calculates the length of the longest consecutive
- *     run of identical characters in a given string.
+ *    run of identical characters in a given string.
  */
 function maxRun (str: string): number {
   let maxRunLength = 0
