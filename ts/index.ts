@@ -9,29 +9,9 @@
  */
 
 import { createPrompt } from 'bun-promptx'
-
-/**
- * Given a string, returns the length of the largest run in the string.
- * the input string
- * return is the length of the largest run
- */
-function runCalculations (): void {
-  const str = createPrompt('Enter a string: ') as string | null
-  if (str !== null) {
-    const longestRun = maxRun(str)
-    console.log(`The length of the longest run is: ${longestRun}`)
-  } else {
-    console.log('No input provided.')
-  }
-}
-/**
- * Calculates the length of the longest consecutive
- *    run of identical characters in a given string.
- */
 function maxRun (str: string): number {
   let maxRunLength = 0
   let currentRunLength = 1
-
   for (let counter = 1; counter < str.length; counter++) {
     if (str[counter] === str[counter - 1]) {
       currentRunLength++
@@ -40,6 +20,19 @@ function maxRun (str: string): number {
       currentRunLength = 1
     }
   }
-
-  return Math.max(maxRunLength, currentRunLength)
+return Math.max(maxRunLength, currentRunLength)
 }
+
+
+function runCalculations (): void {
+  const str = createPrompt('Enter a string: ') as string | null
+    if (str !== null) {
+      const longestRun = maxRun(str)
+      console.log(`The length of the longest run is: ${longestRun}`)
+      console.log(`\nDone.`)
+    } else {
+      console.log('No input provided.')
+    }
+}
+  // Call the function to run it
+  runCalculations()
