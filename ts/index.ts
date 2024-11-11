@@ -13,12 +13,12 @@ function maxRun (str: string): number {
   let maxRunLength = 0
   let currentRunLength = 1
   for (let counter = 1; counter < str.length; counter++) {
-    if (str[counter] === str[counter - 1]) {
-      currentRunLength++
-    } else {
-      maxRunLength = Math.max(maxRunLength, currentRunLength)
-      currentRunLength = 1
-    }
+  if (str[counter] === str[counter - 1]) {
+  currentRunLength++
+  } else {
+  maxRunLength = Math.max(maxRunLength, currentRunLength)
+  currentRunLength = 1
+  }
   }
 return Math.max(maxRunLength, currentRunLength)
 }
