@@ -36,7 +36,7 @@ public final class Main {
             // Call maxRun function and display result
             int result = maxRun(input);
             System.out.println("The length of the largest run is: " + result);
-            System.out.println("Done.");
+            System.out.println("\nDone.");
         }
         scanner.close();
     }
